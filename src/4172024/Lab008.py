@@ -12,7 +12,8 @@ def test_open_vwologin():
     # 64avbdas6a6d89as9a7 - Session?
     # webdriver.Chomre() - fresh copy of browser is created
     # open new tabs, open url, those will be different from the
-    # normal browser.
+    # normal browser. - Automation.
+    # everything is deleted.
 
     driver.get("https://app.vwo.com")  # GET Request to URL param
     print(driver.title)
@@ -21,7 +22,10 @@ def test_open_vwologin():
     driver.maximize_window()
     assert driver.title == "Login - VWO"
 
-
-
+    driver.close()
+    # Close will close the current window or tab.
+    # session id != null( Invalid)
+    # It will not close the other tabs.
+    time.sleep(10)
 
 
